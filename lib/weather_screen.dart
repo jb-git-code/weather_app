@@ -130,25 +130,6 @@ class _WeatherScreenState extends State<WeatherScreen> {
                   'Hourly Forecast',
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 32),
                 ),
-                // SingleChildScrollView(
-                //   scrollDirection: Axis.horizontal,
-                //   child: Row(
-                //     children: [
-                //       for (int i = 0; i < 10; i++)
-                //         HourlyForecast(
-                //           value: data!['list'][i + 1]['dt'].toString(),
-                //           icon:
-                //               data!['list'][i + 1]['weather'][0]['main'] ==
-                //                       'Clouds' ||
-                //                   data!['list'][i + 1]['weather'][0]['main'] ==
-                //                       'Rainy'
-                //               ? Icons.cloud
-                //               : Icons.sunny,
-                //           text: data['list'][i + 1]['main']['temp'].toString(),
-                //         ),
-                //     ],
-                //   ),
-                // ),
                 SizedBox(
                   height: 120,
                   child: ListView.builder(
