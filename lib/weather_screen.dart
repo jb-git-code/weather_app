@@ -67,9 +67,9 @@ class _WeatherScreenState extends State<WeatherScreen> {
       body: FutureBuilder(
         future: getCurrentWeather(),
         builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting)
+          if (snapshot.connectionState == ConnectionState.waiting) {
             return Center(child: CircularProgressIndicator.adaptive());
-
+          }
           if (snapshot.hasError) {
             return Text(snapshot.error.toString());
           }
@@ -81,7 +81,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
           final currentHumidity = info['main']['humidity'];
           final currentPressure = info['main']['pressure'];
           final currentWindSpeed = info['wind']['speed'];
-          final cityName = data!['city']['name'];
+          final cityName = data['city']['name'];
 
           return Padding(
             padding: const EdgeInsets.all(16.0),
